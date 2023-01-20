@@ -1,27 +1,28 @@
-// implementation of stack using array
+ // implementation of stack using array
 #include<iostream>
 using namespace std;
 class Stack{
     // properties
     public:
     int *arr;
-    int top;
+    int top; 
     int size;
     // behaviour,
     Stack(int size){// constructor called
-        this->size=size;
-        arr=new int[size];
-        top=-1;
+        this->size=size; //line 9  wale size ko initialise karwa raha hai
+        arr=new int[size]; //arr ko memory provide karwa de
+        top=-1; // top ko -1 se initialise karwa diya
     }
 
     void push(int element){
-    if(size-top>1){
+        // step-1 check space available
+       if(size-top>1){ 
         top++;
         arr[top]=element;
-    }
-    else{
+        }
+       else{
         cout<<"Stack Overflow"<<endl;
-    }
+       }
     }
     void pop(){
         if(top>=0){
