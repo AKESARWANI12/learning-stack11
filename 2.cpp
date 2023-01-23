@@ -15,7 +15,7 @@ class Stack{
     }
 
     void push(int element){
-        // step-1 check space available
+        // step-1 check space available 
        if(size-top>1){ 
         top++;
         arr[top]=element;
